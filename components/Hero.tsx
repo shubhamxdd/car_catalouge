@@ -18,6 +18,7 @@ const Hero = () => {
         <Button
           title="Explore cars"
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          hoverStyles="hover:bg-white hover:text-black-100"
           handleClick={handleScroll}
         />
       </div>

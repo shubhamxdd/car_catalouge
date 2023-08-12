@@ -6,11 +6,12 @@ const Button = ({
   containerStyles,
   handleClick,
   btnType,
+  hoverStyles,
 }: ButtonProps) => {
   return (
     <button
       disabled={false}
-      className={`custom-btn ${containerStyles} `}
+      className={`custom-btn ${containerStyles} ${hoverStyles} hover:animate-pulse `}
       type={btnType || "button"}
       onClick={handleClick}
     >

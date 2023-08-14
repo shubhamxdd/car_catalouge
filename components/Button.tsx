@@ -11,7 +11,7 @@ const Button = ({
   return (
     <button
       disabled={false}
-      className={`custom-btn ${containerStyles} ${hoverStyles} hover:animate-pulse `}
+      className={`custom-btn ${containerStyles} ${hoverStyles}`}
       type={btnType || "button"}
       onClick={handleClick}
     >

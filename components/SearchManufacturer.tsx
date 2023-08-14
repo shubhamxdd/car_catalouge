@@ -61,7 +61,7 @@ const SearchManufacturer = ({
                   <Combobox.Option
                     key={item}
                     className={({ active }) =>
-                      `relative search-manufacturer__option ${
+                      `relative search-manufacturer__option rounded-full ${
                         active ? "bg-primary-blue text-white" : "text-gray-900"
                       }`
                     }

@@ -3,7 +3,7 @@ import { CarProps } from "@/types";
 import { calculateCarRent } from "@/utils";
 import Image from "next/image";
 import { useState } from "react";
-import { Button } from ".";
+import { Button, CarDetails } from ".";
 
 interface CarCardProps {
   car: CarProps;
@@ -21,7 +21,7 @@ const CarCard = ({ car }: CarCardProps) => {
         </h2>
       </div>
       <p className="flex mt-6 text-[32px] font-extrabold">
-        <span className="self-start text-[14px] font-semibold">$</span>
+        <span className="self-start text-[14px] font-semibold">₹</span>
         {carRent}
         <span className="self-start text-[14px] font-semibold">/day</span>
       </p>
@@ -66,6 +66,8 @@ const CarCard = ({ car }: CarCardProps) => {
           />
         </div>
       </div>
+
+      <CarDetails isOpen={isOpen} setClose={() => setIsOpen(false)} car={car} />
     </div>
   );
 };

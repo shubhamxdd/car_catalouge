@@ -1,5 +1,6 @@
 import Button from "./Button";
 import CarCard from "./CarCard";
+import CarDetails from "./CarDetails";
 import Filters from "./Filters";
 import Footer from "./Footer";
 import Hero from "./Hero";
@@ -16,4 +17,5 @@ export {
   SearchManufacturer,
   Filters,
   CarCard,
+  CarDetails,
 };

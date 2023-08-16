@@ -12,10 +12,10 @@ import { fetchCars } from "@/utils";
 export default async function Home({ searchParams }: any) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
-    year: searchParams.year || "",
+    year: searchParams.year || 2022,
     fuel: searchParams.fuel || "",
     limit: searchParams.limit || 10,
-    model: searchParams.model || 2022,
+    model: searchParams.model || "",
   });
 
   const isDataEmpty = !allCars || allCars.length < 1 || !Array.isArray(allCars);
@@ -39,8 +39,8 @@ export default async function Home({ searchParams }: any) {
         {!isDataEmpty ? (
           <section>
             <div className="home__cars-wrapper">
-              {allCars?.map((car, index) => (
-                <CarCard car={car} key={index} />
+              {allCars?.map((car) => (
+                <CarCard car={car} />
               ))}
             </div>
             <ShowMoreButton

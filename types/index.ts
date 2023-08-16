@@ -53,3 +53,8 @@ export interface FiltersProps {
   title: string;
   options: OptionProps[];
 }
+
+export interface ShowMoreButtonProps {
+  page: number;
+  isNext: boolean;
+}

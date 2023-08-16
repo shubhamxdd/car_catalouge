@@ -7,7 +7,7 @@ export async function fetchCars(filters: FilterProps) {
     "X-RapidAPI-Host": process.env.NEXT_PUBLIC_X_RapidAPI_Host,
   };
 
-  // "http://localhost:3000/car_details"
+  // "http://localhost:3001/car_details"
   const res = await fetch(
     `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,
     { headers: headers }

@@ -32,11 +32,11 @@ const CarDetails = ({ isOpen, setClose, car }: CarDetailsProps) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white text-left shadow-xl  transition-all flex flex-col gap-5">
+                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white text-left shadow-xl  transition-all flex flex-col gap-5 p-6">
                   <button
                     type="submit"
                     onClick={setClose}
-                    className="absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full"
+                    className="absolute top-2 right-2 z-10 w-fit p-2 bg-white rounded-full"
                   >
                     <Image
                       src="/close.svg"
@@ -86,8 +86,26 @@ const CarDetails = ({ isOpen, setClose, car }: CarDetailsProps) => {
                     </div>
                   </div>
 
-                  
-
+                  <div className="flex flex-1 flex-col gap-2">
+                    <h2 className="font-semibold text-xl capitalize">
+                      {car.make} {car.model}
+                    </h2>
+                    <div className="flex flex-wrap mt-3 gap-4">
+                      {Object.entries(car).map(([key, value]) => (
+                        <div
+                          className="flex justify-between gap-5 w-full text-right"
+                          key={key}
+                        >
+                          <h4 className="text-grey capitalize">
+                            {key.split("_").join(" ")}
+                          </h4>
+                          <p className="capitalize text-black-100 font-semibold">
+                            {value}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
